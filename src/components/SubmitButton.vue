@@ -7,12 +7,13 @@
   </button>
 </template>
 
+<script setup>
+const props = defineProps({ btnName: { required: true, type: String } });
+</script>
+
 <script>
 export default {
   name: "SubmitButton",
-  props: {
-    btnName: String,
-  },
 };
 </script>
 

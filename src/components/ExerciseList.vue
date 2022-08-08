@@ -1,3 +1,12 @@
+<template>
+  <select class="p-2 w-full text-gray-500 focus:outline-none">
+    <option disabled selected>Choose an exercise</option>
+    <option v-for="exercise in filteredExercises" :key="exercise.id">
+      {{ exercise.name }}
+    </option>
+  </select>
+</template>
+
 <script>
 export default {
   name: "ExerciseList",
@@ -5,7 +14,9 @@ export default {
 </script>
 
 <script setup>
-import { ref, computed } from "vue";
+import { ref, computed, defineProps } from "vue";
+
+const props = defineProps({ workoutType: String });
 
 const exercises = ref([
   {
@@ -34,17 +45,9 @@ const exercises = ref([
     type: "cardio",
   },
 ]);
-
-const strengthExercises = computed(function () {
-  return exercises.value.filter((exercise) => exercise.type === "strength");
+const filteredExercises = computed(function () {
+  return exercises.value.filter(
+    (exercise) => exercise.type === props.workoutType
+  );
 });
 </script>
-
-<template>
-  <select class="p-2 w-full text-gray-500 focus:outline-none">
-    <option disabled selected>Choose an exercise</option>
-    <option v-for="exercise in strengthExercises" :key="exercise.id">
-      {{ exercise.name }}
-    </option>
-  </select>
-</template>
