@@ -3,7 +3,7 @@
     <div class="col s6">
       <WorkoutCreate />
     </div>
-    <div class="col s6">
+    <div class="col s8">
       <WorkoutList />
     </div>
   </div>

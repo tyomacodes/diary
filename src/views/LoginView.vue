@@ -34,7 +34,7 @@
           v-model="password"
         />
       </div>
-      <SubmitButton :btn-name="btnName" />
+      <ButtonComponent :btn-name="btnName" type="submit" />
       <router-link class="text-sm mt-6 text-center" to="/register">
         Don't have an account? <span class="text-at-light-green">Register</span>
       </router-link>
@@ -47,7 +47,7 @@
 </template>
 
 <script>
-import SubmitButton from "@/components/SubmitButton";
+import ButtonComponent from "@/components/ButtonComponent";
 import { ref } from "vue";
 // import { supabase } from "../supabase/init";
 // import { useRouter } from "vue-router";
@@ -60,7 +60,7 @@ export default {
     };
   },
   components: {
-    SubmitButton,
+    ButtonComponent,
   },
   setup() {
     // Create data / vars

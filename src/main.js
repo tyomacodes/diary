@@ -4,7 +4,7 @@ import "./registerServiceWorker";
 import router from "./router";
 import store from "./store";
 import "./assets/tailwind.css";
-import SubmitButton from "@/components/SubmitButton";
+import SubmitButton from "@/components/ButtonComponent";
 import ExerciseList from "@/components/ExerciseList";
 
 // createApp(App).use(store).use(router).mount("#app");

@@ -10,16 +10,16 @@
       </div>
     </form>
   </div>
-  <SubmitButton :btn-name="btnName" />
+  <ButtonComponent :btn-name="btnName" />
 </template>
 
 <script>
-import SubmitButton from "@/components/SubmitButton";
+import ButtonComponent from "@/components/ButtonComponent";
 
 export default {
   name: "ExerciseView",
   components: {
-    SubmitButton,
+    ButtonComponent,
   },
   data() {
     return {

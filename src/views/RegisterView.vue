@@ -47,7 +47,7 @@
           v-model="confirmPassword"
         />
       </div>
-      <SubmitButton :btn-name="btnName" />
+      <ButtonComponent :btn-name="btnName" type="submit" />
       <router-link class="text-sm mt-6 text-center" to="/login">
         Already have an account? <span class="text-at-light-green">Login</span>
       </router-link>
@@ -56,8 +56,8 @@
 </template>
 
 <script>
-import SubmitButton from "@/components/SubmitButton";
 import { ref } from "vue";
+import ButtonComponent from "@/components/ButtonComponent";
 // import { supabase } from "../supabase/init";
 // import { useRouter } from "vue-router";
 
@@ -69,7 +69,7 @@ export default {
     };
   },
   components: {
-    SubmitButton,
+    ButtonComponent,
   },
   setup() {
     // Create data / vars
