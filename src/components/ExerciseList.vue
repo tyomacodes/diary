@@ -2,9 +2,7 @@
   <select
     class="p-2 w-full text-gray-500 focus:outline-none"
     v-model="selectedExercise"
-    @change="onExerciseSelected"
   >
-    <option disabled selected>Choose an exercise</option>
     <option v-for="exercise in filteredExercises" :key="exercise.id">
       {{ exercise.name }}
     </option>
@@ -18,16 +16,11 @@ export default {
 </script>
 
 <script setup>
-import { ref, computed, defineProps, defineEmits } from "vue";
+import { ref, computed, defineProps } from "vue";
 
 const selectedExercise = ref("");
 
 const props = defineProps({ workoutType: String });
-const emits = defineEmits(["exerciseSelected"]);
-
-const onExerciseSelected = function () {
-  emits("exerciseSelected", selectedExercise);
-};
 
 const exercises = ref([
   {

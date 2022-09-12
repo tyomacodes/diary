@@ -9,6 +9,7 @@
 </template>
 
 <script setup>
+// eslint-disable-next-line no-unused-vars
 const props = defineProps({
   label: { default: "", type: String },
   modelValue: { default: "", type: [String, Number] },

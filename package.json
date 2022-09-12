@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@vueuse/core": "^9.1.0",
+    "axios": "^0.27.2",
     "core-js": "^3.8.3",
     "materialize-css": "^1.0.0-rc.2",
     "register-service-worker": "^1.7.2",
